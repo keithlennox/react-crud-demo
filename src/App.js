@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Schedule from './Schedule';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 //Schedule object
 const initialSchedule = [
@@ -51,9 +50,7 @@ const App = () => {
   return (
     <div>
       <MyContext.Provider value={{videoId, setVideoId, schedule, setSchedule, editing, setEditing, form, setForm}}>
-        <Router>
-          <Route path="/schedule" exact component={Schedule} />
-        </Router>
+        <Schedule/>
       </MyContext.Provider>
     </div>
   );

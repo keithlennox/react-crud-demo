@@ -9,7 +9,7 @@ import 'react-table/react-table.css';
 
 const Schedule = () => {
  
-  const {videoId, setVideoId, schedule, setSchedule, editing, setEditing, form, setForm} = useContext(MyContext);
+  const {schedule, setSchedule, editing, setEditing, setForm} = useContext(MyContext);
 
   //Edit event
   const editEvent = (row) => {
@@ -57,7 +57,7 @@ const Schedule = () => {
   
   return (
     <div>
-      <h1>I am the schedule page</h1>
+      <h1>Schedule</h1>
       <div>
         {
           editing ? (
